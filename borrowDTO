@@ -1,0 +1,8 @@
+create table borrow (
+	memberNumber integer,
+	bookNumber integer,
+    borrowDate date,
+    state varchar(10) not null,
+    foreign key(memberNumber) references member(memberNumber),
+    foreign key(bookNumber) references book(bookNumber)
+);
