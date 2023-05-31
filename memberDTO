@@ -1,0 +1,11 @@
+create table member (
+	memberNumber integer auto_increment primary key ,
+    id varchar(15) not null unique,
+    pw varchar(15) not null,
+    name varchar(5) not null,
+    phone varchar(11) not null,
+    address varchar(30) not null,
+    email varchar(15) not null,
+    grade varchar(10) default '준회원'
+   
+);
