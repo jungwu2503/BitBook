@@ -1,4 +1,4 @@
-package BitBook;
+package bitBook;
 
 import java.util.ArrayList;
 
