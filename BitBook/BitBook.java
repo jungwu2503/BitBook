@@ -6,11 +6,12 @@ public class BitBook {
 	
 	public static void main(String[] args) {
 		BitBook bitBook = new BitBook();
-		bitBook.menuExecute();
+		bitBook.executeService();
 	}
 	
-	public void menuExecute() {
+	public void executeService() {
 		dto = new MemberDTO();
+		
 	}
 	
 	public boolean login() {
@@ -25,9 +26,13 @@ public class BitBook {
 		
 	}
 	
-	public void loan() {
+	public void borrow() {
 		
 	
+	}
+	
+	public void executeMenu() {
+		
 	}
 	
 	public boolean select(String str) {

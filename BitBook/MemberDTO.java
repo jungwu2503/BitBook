@@ -58,12 +58,10 @@ public class MemberDTO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
 	@Override
 	public String toString() {
 		return "MemberDTO [memberNumber=" + memberNumber + ", id=" + id + ", password=" + password + ", name=" + name
-				+ ", phone=" + phone + ", address=" + address + ", email=" + email + "]";
+				+ ", phone=" + phone + ", address=" + address + ", email=" + email + ", grade=" + grade + "]";
 	}
-	
-	
+		
 }
