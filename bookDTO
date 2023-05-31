@@ -1,0 +1,7 @@
+create table book (
+	bookNumber integer auto_increment primary key ,
+    title varchar(20) not null,
+    grade integer not null,
+    state varchar(10) not null
+   
+);
