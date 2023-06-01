@@ -1,5 +1,7 @@
 package bitBook;
 
+import java.io.FileNotFoundException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class BookService {
@@ -10,32 +12,27 @@ public class BookService {
 	}
 	
 	//책 제목으로 검색
-	public ArrayList<BookDTO> search(String title) {		
+	public ArrayList<BookDTO> search(String title) throws FileNotFoundException, SQLException {		
 
 		ArrayList<BookDTO> searchList = bd.searchTitle(title);
 		return searchList;
 	}
 	
-	public void borrow(int bookNumber) {	
-		bd.bookBorrow(bookNumber);
+	public boolean borrow(int bookNumber,int memberNumber) throws FileNotFoundException, SQLException {	
+		return bd.bookBorrow(bookNumber,memberNumber);
 		
-		//유효성검사(책이 대여가능한 상태인지)
+		
 	}
 
 	//대출한 책 리스트
-	public ArrayList<BorrowDTO> borrowList(int memberNumber) {
+	public ArrayList<BorrowDTO> borrowList(int memberNumber) throws FileNotFoundException, SQLException {
 		
 		ArrayList<BorrowDTO> list = bd.searchBorrowList(memberNumber);
 		return list;
 	}
 	
-	public void bookReuturn(int bookNumber) {
-		bd.borrowUpdate(bookNumber);
-	}
-	
-	
-	public boolean checkEndDate() {
-		return false;
+	public boolean bookReuturn(int bookNumber) throws FileNotFoundException, SQLException {
+		return bd.borrowUpdate(bookNumber);
 		
 	}
 

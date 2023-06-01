@@ -23,8 +23,7 @@ public class MemberService {
 	}
 	
 	public int login(String id, String pw) throws FileNotFoundException, SQLException { // 로그인
-//		int memberNumber = memberDAO.checkMember(id, pw);
-		int memberNumber = 10;
+		int memberNumber = memberDAO.checkMember(id, pw);
 		return memberNumber;
 	}
 	

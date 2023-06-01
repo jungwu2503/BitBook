@@ -1,9 +1,11 @@
 package bitBook;
 
+import java.sql.Date;
+
 public class BorrowDTO {
 	private int memberNumber;
 	private int bookNumber;
-	private String borrowDate;
+	private Date borrowDate;
 	private String state;
 	
 	public int getMemberNumber() {
@@ -18,10 +20,11 @@ public class BorrowDTO {
 	public void setBookNumber(int bookNumber) {
 		this.bookNumber = bookNumber;
 	}
-	public String getBorrowDate() {
+
+	public Date getBorrowDate() {
 		return borrowDate;
 	}
-	public void setBorrowDate(String borrowDate) {
+	public void setBorrowDate(Date borrowDate) {
 		this.borrowDate = borrowDate;
 	}
 	public String getState() {
@@ -30,10 +33,11 @@ public class BorrowDTO {
 	public void setState(String state) {
 		this.state = state;
 	}
-
 	@Override
 	public String toString() {
 		return "BorrowDTO [memberNumber=" + memberNumber + ", bookNumber=" + bookNumber + ", borrowDate=" + borrowDate
 				+ ", state=" + state + "]";
 	}
+
+
 }
