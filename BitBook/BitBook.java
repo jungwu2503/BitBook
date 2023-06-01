@@ -46,7 +46,7 @@ public class BitBook {
 			menu = sc.next();
 			switch(menu) {
 				case "1" -> search();
-				case "2" -> BorrowList(memberNumber);
+				case "2" -> borrowList(memberNumber);
 			}
 			
 		}
@@ -130,7 +130,8 @@ public class BitBook {
 		System.out.println("대출이 완료되었습니다");
 	}
 	
-	public void BorrowList(int memberNumber) {
+	public void borrowList(int memberNumber) {
+		
 		int bookNumber;
 		ArrayList<BorrowDTO> list = bs.borrowList(memberNumber);
 		
