@@ -110,7 +110,7 @@ public class BitBook {
 		String bookTitle = sc.nextLine();
 		
 		System.out.println("┌────────────────────책 검색─────────────────────┐");
-		System.out.printf("%10s %20s %7s \n", "책번호", "제목", "상태");
+		System.out.printf(String.format("%5s %15s %7s \n", "책번호", "제목", "상태").replace(' ', '　'));
 		System.out.println("└──────────────────────────────────────────────┘");
 		ArrayList<BookDTO> bookList = bs.search(bookTitle);
 		for(BookDTO dto: bookList) {
@@ -119,7 +119,7 @@ public class BitBook {
 				stateStr = "대여중";
 			}
 			
-			System.out.printf(String.format("%10s %20s %7s \n", dto.getBookNumber() ,dto.getTitle(), stateStr).replace(' ', '　'));
+			System.out.printf(String.format("%5s %15s %7s \n", dto.getBookNumber() ,dto.getTitle(), stateStr).replace(' ', '　'));
 			
 			
 		}
@@ -156,14 +156,14 @@ public class BitBook {
 		int bookNumber;
 		ArrayList<BorrowDTO> list = bs.borrowList(memberNumber);
 		System.out.println("┌────────────────────대출 리스트──────────────────┐");
-		System.out.printf("%-9s%-30s%-5s\n", "책 번호", "빌린날짜", "반납여부");
-		System.out.println("└──────────────────────────────────────────────┘");
+		System.out.printf("%3s%-9s%-25s%-6s\n", " ", "책 번호", "빌린날짜", "반납여부");
+		System.out.println("└─────────────────────────────────────────────┘");
 		for(BorrowDTO dto: list) {
 			String stateStr = "반납완료";
 			if(dto.getState().equals("1")) {
 				stateStr = "대여중";
 			}
-			System.out.printf("%s%-9s%-30s%-6s\n", "  ", dto.getBookNumber() ,dto.getBorrowDate() , stateStr);
+			System.out.printf("%3s%-9s%-25s%-6s\n", " ", dto.getBookNumber() ,dto.getBorrowDate() , stateStr);
 		}
 		
 		
