@@ -9,6 +9,7 @@ public class MemberDTO {
 	private String address;
 	private String email;
 	private String grade;
+
 	
 	public String getGrade() {
 		return grade;

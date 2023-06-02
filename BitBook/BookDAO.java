@@ -38,15 +38,35 @@ public class BookDAO {
 	
 	public boolean bookBorrow(int bookNumber,int memberNumber) throws FileNotFoundException, SQLException {
 		Connection conn = ConnectionManager.getConnection();
+
 		conn.setAutoCommit(false);
 		int state = 2;
 		
+		String sql = "select count(memberNumber) as count from borrow where memberNumber=? and state=1;";
+	
+		String checkSQL = "select * from book where bookNumber = ?; ";
 		String insertSQL = "insert into borrow (memberNumber, bookNumber, borrowDate, state) values (?, ?, CURRENT_TIME, ?);"; // insert 해주는 query 필요
 		String updateSQL = "update book set state=? where bookNumber=? and state=1;";
 		
-
-	    
-		PreparedStatement pstmt = conn.prepareStatement(insertSQL);
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setInt(1, memberNumber);
+		ResultSet rs = pstmt.executeQuery();
+		
+		if(rs.next()) {
+			System.out.println(rs.getInt(1));
+			if(rs.getInt(1) > 1) {
+				return false;
+			}
+		}
+		
+		pstmt = conn.prepareStatement(checkSQL);
+		pstmt.setInt(1, bookNumber);
+		rs = pstmt.executeQuery();
+		if(!rs.next()) {
+			return false;
+		}
+		
+		pstmt = conn.prepareStatement(insertSQL);
 		pstmt.setInt(1, memberNumber);
 		pstmt.setInt(2, bookNumber);
 		pstmt.setString(3, "1");
@@ -67,7 +87,6 @@ public class BookDAO {
 		conn.commit();
 		conn.setAutoCommit(true);
 		ConnectionManager.closeConnection(null, pstmt, conn);
-		
 		return true;
 		
 	}
@@ -77,6 +96,8 @@ public class BookDAO {
 		ArrayList<BorrowDTO> list = new ArrayList<BorrowDTO>();
 		
 		String sql = "select * from borrow where memberNumber = ?;"; // insert 해주는 query 필요
+		
+	
 		
 		
 		PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -92,7 +113,7 @@ public class BookDAO {
 			list.add(dto);
 		}
 		
-		ConnectionManager.closeConnection(null, pstmt, conn);
+		ConnectionManager.closeConnection(rs, pstmt, conn);
 		
 		return list;
 		

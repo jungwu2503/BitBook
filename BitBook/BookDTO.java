@@ -5,6 +5,11 @@ public class BookDTO {
 	private String title;
 	private int grade;
 	private String state;
+	// 1. 전시중(대여가능)
+	// 2. 정회원
+	// 3. 특별회원
+	// 4. 관리자
+	
 	public int getBookNumber() {
 		return bookNumber;
 	}
