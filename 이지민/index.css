@@ -1,0 +1,51 @@
+.bookContainer{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+}
+
+.listContent{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.itemContainer{
+    display: flex;
+    border: 1px solid;
+
+}
+
+.imgContainer{
+    flex: 1;
+    background-image: url("./data/book.jpg");
+    background-repeat : no-repeat;
+    width: 100%;
+    background-size : cover;
+    border: 1px solid;
+    padding: 5px;
+}
+
+.contentContainer{
+    flex: 10;
+    
+    padding: 10px;
+}
+
+.buttonContainer{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.borrowButton{
+    width: 80px;
+    height: 30px;
+    background-color: #5055b1;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid;
+    border-radius: 5px;
+}
