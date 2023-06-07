@@ -1,0 +1,20 @@
+
+body{
+    min-height: 100vh;
+    margin: 0 auto;
+}
+.nav{
+    width: 300px;
+    height: 100vh;
+    text-align: center;
+
+    background-color: #FFCC99;
+    padding-top: 150px;
+  
+}
+.navimg{
+    margin: 0 auto;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
