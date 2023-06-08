@@ -1,0 +1,18 @@
+#pageNavContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* width: 100px; */
+}
+
+.arrowButton{
+    border: 0px;
+    background-color: transparent;
+}
+
+
+#pageNumber{
+    font-size: 5px;
+    border: 1px solid;
+    padding: 5px;
+}
