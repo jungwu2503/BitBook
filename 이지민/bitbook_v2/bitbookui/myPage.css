@@ -1,0 +1,25 @@
+#infoContainer{
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 60%;
+    margin: 0px 280px 0px 280px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#topContainer{
+    background-color: gray;
+    /* border-radius: 10px; */
+    
+    height: 25%;
+}
+
+#userIcon{
+    height: 100%;
+    width: 130px;
+    background-color: yellow;
+    border-radius: 500px;
+    transform: translate(140px, 65px);
+    /* transform: translate(45px); */
+}
