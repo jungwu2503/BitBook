@@ -17,7 +17,7 @@ public class MemberService {
 			System.out.println("이미 존재하는 아이디입니다.");
 			return false; // 회원가입 안했으므로 false 리턴
 		}
-		
+		System.out.println("회원가입되었습니다.");
 		memberDAO.insert(dto);
 		return true; // 회원가입 성공
 	}

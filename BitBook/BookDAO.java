@@ -43,9 +43,8 @@ public class BookDAO {
 		int state = 2;
 		
 		String sql = "select count(memberNumber) as count from borrow where memberNumber=? and state=1;";
-	
 		String checkSQL = "select * from book where bookNumber = ?; ";
-		String insertSQL = "insert into borrow (memberNumber, bookNumber, borrowDate, state) values (?, ?, CURRENT_TIME, ?);"; // insert 해주는 query 필요
+		String insertSQL = "insert into borrow (memberNumber, bookNumber, borrowDate, state) values (?, ?, CURRENT_TIME, ?);";
 		String updateSQL = "update book set state=? where bookNumber=? and state=1;";
 		
 		PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -53,8 +52,7 @@ public class BookDAO {
 		ResultSet rs = pstmt.executeQuery();
 		
 		if(rs.next()) {
-			System.out.println(rs.getInt(1));
-			if(rs.getInt(1) > 1) {
+			if(rs.getInt(1) > 2) {
 				return false;
 			}
 		}

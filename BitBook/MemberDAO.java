@@ -40,6 +40,7 @@ public class MemberDAO {
 			flag = true;
 		}
 		ConnectionManager.closeConnection(null, pstmt, conn);
+		
 		return flag;
 	}
 	

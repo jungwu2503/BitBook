@@ -1,25 +1,24 @@
 package bitBook;
 
-import java.io.FileNotFoundException;
-import java.sql.Date;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.io.*;
+import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class BitBook {
 	private static Scanner sc;
-	int memberNumber;
-	BookService bs;
-	MemberService ms;
+	private int memberNumber;
+	private BookService bs;
+	private MemberService ms;
+	
 	public BitBook() {
-		sc= new Scanner(System.in);
+		sc = new Scanner(System.in);
 		bs = new BookService();
 		ms = new MemberService();
 	}
 	
 	public static void main(String[] args) {
+		
 		BitBook bitBook = new BitBook();
 		try {
 			bitBook.executeService();
@@ -50,6 +49,7 @@ public class BitBook {
 			}
 		}
 	}
+	
 	public void executeMenu() throws FileNotFoundException, SQLException {
 		while(true){
 			System.out.println("1.검색 2.대출리스트 3.로그아웃");
@@ -77,12 +77,10 @@ public class BitBook {
 		if(memberNumber > 0 ) {
 			System.out.println("로그인 성공");
 			executeMenu();
-		}
-		else {
+		} else {
 			System.out.println("로그인 실패(아이디 또는 비밀번호가 맞지 않습니다. 다시 입력해주세요.)");
 			login();
 		}
-		
 	}
 	
 	public void register() throws FileNotFoundException, SQLException {
@@ -99,8 +97,8 @@ public class BitBook {
 		md.setAddress(sc.nextLine());
 		System.out.print("이메일 : ");
 		md.setEmail(sc.nextLine());
+		
 		ms.register(md);
-		System.out.println("회원가입이 완료되었습니다. ");
 		executeService();
 	}
 	
@@ -118,41 +116,31 @@ public class BitBook {
 			if(dto.getState().equals("2")) {
 				stateStr = "대여중";
 			}
-			
 			System.out.printf(String.format("%5s %15s %7s \n", dto.getBookNumber() ,dto.getTitle(), stateStr).replace(' ', '　'));
-			
-			
 		}
-		
 		System.out.println("1.대출 2.취소");
 		System.out.print("메뉴 선택 : ");
 		String menu = sc.nextLine();
 
 		if(menu.equals("1")) {
-			System.out.println("대출할 책의 번호를 입력해주세요: ");
+			System.out.print("대출할 책의 번호를 입력해주세요: ");
 			bookNumber = sc.nextInt();
 			borrow(bookNumber);
 		}
 		
-	
-		
 	}
 	
 	public void borrow(int bookNumber) throws FileNotFoundException, SQLException {
-
 		if(bs.borrow(bookNumber,memberNumber)) {
 			System.out.println("대출이 완료되었습니다");
 			sc.nextLine();
-			
-		}
-		else {
+		} else {
 			System.out.println("대출 실패");
 			sc.nextLine();
 		}
 	}
 	
 	public void borrowList(int memberNumber) throws FileNotFoundException, SQLException {
-		
 		int bookNumber;
 		ArrayList<BorrowDTO> list = bs.borrowList(memberNumber);
 		System.out.println("┌────────────────────대출 리스트──────────────────┐");
@@ -166,37 +154,25 @@ public class BitBook {
 			System.out.printf("%3s%-9s%-25s%-6s\n", " ", dto.getBookNumber() ,dto.getBorrowDate() , stateStr);
 		}
 		
-		
-		
 		System.out.println("1.반납 2.취소");
 		System.out.print("메뉴 선택 : ");
 		String menu = sc.nextLine();
 
 		if(menu.equals("1")) {
-			System.out.println("반납할 책 번호를 입력해주세요 : ");
-			System.out.print("책 번호 : ");
+			System.out.print("반납할 책 번호를 입력해주세요 : ");
 			bookNumber = sc.nextInt();
-			bookReuturn(bookNumber);
+			bookReturn(bookNumber);
 		}
-	
-		
-
 	}
-	public void bookReuturn(int bookNumber) throws FileNotFoundException, SQLException {
+	
+	public void bookReturn(int bookNumber) throws FileNotFoundException, SQLException {
 		if(bs.bookReuturn(bookNumber)) {
 			System.out.println("해당 책이 반납 되었습니다.");	
 			sc.nextLine();
-		}
-		else{
+		} else{
 			System.out.println("반납실패");
 			sc.nextLine();
 		}
 		
 	}
-	
-
-
-	
 }
-
-
