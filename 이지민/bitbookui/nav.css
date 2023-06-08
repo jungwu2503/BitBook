@@ -1,0 +1,24 @@
+.nav{
+    flex: 1;
+    width: 300px;
+    height: 100vh;
+    text-align: center;
+
+    background-color: #BD5D38;
+    padding-top: 250px;
+}
+
+.navLi{
+    list-style-type: none;
+    margin: 20px 0;
+}
+
+.navList{
+    margin-top: 70px;
+}
+.imgProfile{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    box-shadow: 0px 0px 0px 10px #CA7D60;
+}

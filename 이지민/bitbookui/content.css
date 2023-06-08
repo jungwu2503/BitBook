@@ -1,0 +1,111 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    padding: 50px 100px 0px 100px;
+}
+
+#contentHearder{
+    display: flex;
+    flex-direction: row;
+}
+
+#contentTitle{
+    flex:7;
+}
+
+#search{
+    flex:3;
+    align-self: flex-end;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+#searchButton{
+    flex:1;
+    align-self: flex-end;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.bookContainer{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+}
+
+.listContent{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.itemContainer{
+    display: flex;
+    border: 1px solid;
+
+}
+
+.imgContainer{
+    flex: 1;
+    background-image: url("./data/book.jpg");
+    background-repeat : no-repeat;
+    width: 100%;
+    background-size : cover;
+    border: 1px solid;
+    padding: 5px;
+}
+
+.contentContainer{
+    flex: 10;
+    
+    padding: 10px;
+}
+
+.buttonContainer{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.borrowButton{
+    width: 80px;
+    height: 30px;
+    background-color: #5055b1;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#pageNavContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* width: 100px; */
+}
+
+.arrowButton{
+    border: 0px;
+    background-color: transparent;
+}
+
+
+#pageNumber{
+    font-size: 5px;
+    border: 1px solid;
+    padding: 5px;
+}
+
+.contentFooter{
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    justify-self: center;
+    justify-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-top: 5px;
+}
