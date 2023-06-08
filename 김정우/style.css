@@ -1,0 +1,96 @@
+body{
+    min-height: 100vh;
+    margin: 0 auto;
+}
+.nav-li{
+    list-style-type: none;
+    margin: 20px 0;
+}
+.nav{
+    width: 300px;
+    height: 100vh;
+    text-align: center;
+
+    background-color: #BD5D38;
+    padding-top: 250px;
+}
+.nav-list{
+    margin-top: 70px;
+}
+.img-profile{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    box-shadow: 0px 0px 0px 10px #CA7D60;
+}
+
+.bookContainer{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+}
+
+.listContent{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.itemContainer{
+    display: flex;
+    border: 1px solid;
+
+}
+
+.imgContainer{
+    flex: 1;
+    background-image: url("./data/book.jpg");
+    background-repeat : no-repeat;
+    width: 100%;
+    background-size : cover;
+    border: 1px solid;
+    padding: 5px;
+}
+
+.contentContainer{
+    flex: 10;
+    
+    padding: 10px;
+}
+
+.buttonContainer{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.borrowButton{
+    width: 80px;
+    height: 30px;
+    background-color: #5055b1;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#pageNavContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* width: 100px; */
+}
+
+.arrowButton{
+    border: 0px;
+    background-color: transparent;
+}
+
+
+#pageNumber{
+    font-size: 5px;
+    border: 1px solid;
+    padding: 5px;
+}
