@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="borrowList.css" rel="stylesheet" type="text/css" />
+    <title>도서 대출</title>
+</head>
+<body>
+    <table border="1" cellspacing="0" cellpadding="10" align="center">
+        <tr  bgcolor="#F3BDA6" id="colTitle">
+            <td class="titleLeft">도서 번호</td>
+            <td class="titleCenter">도서 이름</td>
+            <td class="titleCenter">반납 여부</td>
+            <td class="titleCenter">도서 상태</td>
+            <td class="titleRight">대출 버튼</td>
+        </tr>
+        <tr align="center">
+            <td>000001</td>
+            <td>이것이 자바다</td>
+            <td>대여 가능</td>
+            <td>1급</td>
+            <td><button class="borrowButton">대출</button></td>
+        </tr>
+        <tr align="center">
+            <td>000002</td>
+            <td>이것이 자바다</td>
+            <td>대여중</td>
+            <td>1급</td>
+            <td><button class="borrowButton" disabled>대출</button></td>
+        </tr>
+
+    </table>
+</body>
+</html>
