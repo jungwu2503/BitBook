@@ -1,0 +1,38 @@
+table{
+    width: 960px;
+}
+td{
+    width: 192px;
+}
+tr{
+    text-align: center;
+}
+
+#colTitle{
+    font-weight: bold;
+    font-size: 24px;
+}
+.colContent{
+    font-size: 20px;
+}
+
+.borrowButton{
+    padding: 4px 16px;
+    border: 1px solid;
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+.titleCenter{
+    border-left: none;
+    border-right: none;
+}
+
+.titleRight{
+    border-left: none;
+}
+
+.titleLeft{
+    border-right: none;
+
+}
