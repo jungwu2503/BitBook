@@ -1,0 +1,40 @@
+{
+    "book": [
+        {
+            "bookNumber": "000001",
+            "bookName" : "이것이 자바다",
+            "borrowState": "대여가능",
+            "bookState": "1급"
+        },
+        {
+            "bookNumber": "000002",
+            "bookName" : "이것이 자바다",
+            "borrowState": "대여가능",
+            "bookState": "1급"
+        },
+        {
+            "bookNumber": "000003",
+            "bookName" : "이것이 자바다",
+            "borrowState": "대여가능",
+            "bookState": "1급"
+        },
+        {
+            "bookNumber": "000004",
+            "bookName" : "이것이 자바다",
+            "borrowState": "대여가능",
+            "bookState": "1급"
+        },
+        {
+            "bookNumber": "000005",
+            "bookName" : "이것이 자바다",
+            "borrowState": "대출중",
+            "bookState": "1급"
+        },
+        {
+            "bookNumber": "000006",
+            "bookName" : "저것이 자바다",
+            "borrowState": "대여가능",
+            "bookState": "1급"
+        }
+    ]
+}

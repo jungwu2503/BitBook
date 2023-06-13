@@ -1,0 +1,87 @@
+
+body{
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.logOut {
+  background: #CA7D60;
+  border-radius: 999px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.navLi{
+    list-style-type: none;
+    margin: 20px 0;
+
+    font-weight: 1000;
+    font-size: 20px;
+}
+
+.navLiColor{
+    color: #EED6CD;
+}
+
+.nav{
+    width: 300px;
+    height: 100vh;
+    text-align: center;
+    background-color: #BD5D38;
+    padding-top: 250px;
+}
+
+
+
+.navList{
+    margin-top: 70px;
+}
+.navName{
+    font-size: 20px;
+    color: #EED6CD;
+    font-weight: 1000;
+}
+.imgProfile{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    box-shadow: 0px 0px 0px 10px #CA7D60;
+}
+
+a{
+    text-decoration: none;
+    color: #EED6CD;
+
+}
+
+.here{
+    color: #202082;
+}
+/* a:visited {
+    color: #EED6CD;
+} */
+a:hover, a:focus { animation-duration: 3s; animation-name: rainbowLink; animation-iteration-count: infinite; } 
+@keyframes rainbowLink {     
+ 0% { color: #ff2a2a; }
+ 15% { color: #ff7a2a; }
+ 30% { color: #ffc52a; }
+ 45% { color: #43ff2a; }
+ 60% { color: #2a89ff; }
+ 75% { color: #202082; }
+ 90% { color: #6b2aff; } 
+ 100% { color: #e82aff; }
+}
