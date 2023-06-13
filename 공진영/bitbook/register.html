@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./register.css" rel="stylesheet" type="text/css" />
+    <title>Register</title>
+</head>
+<body >
+    <div id="registerContainer">
+        <header>
+            <h1>Register</h1>
+        </header>
+        <div id="inputContainer">
+            <div>
+                <div>id:</div><input type="text" id="idInput" placeholder="Input your identy...">
+                <button>Check Id</button>
+            </div>
+            <div>
+                <div>pw:</div>
+                <input type="password" id="pwInput" placeholder="Input your password...">
+            </div>
+            <div>
+                <div>pw confirm:</div>
+                <input type="password" id="pwInputConfirm" placeholder="Input your password again...">
+            </div>
+            <div>
+                <div>name:</div>
+                <input type="text" id="nameInput" placeholder="Input your name...">
+            </div>
+            <div>
+                <div>phone:</div>
+                <input type="text" id="phoneInput" placeholder="Input your phone number...">
+            </div>
+            <div>
+                <div>address_main:</div>
+                <input type="text" id="addressMainInput" placeholder="Input your main address...">
+            </div>
+            <div>
+                <div>address_detail:</div>
+                <input type="text" id="addressDetailInput" placeholder="Input your detail address...">
+            </div>
+            <div>
+                <div>zip code:</div>
+                <input type="text" id="zipCodeInput" placeholder="Input your zip code...">
+            </div>
+            <div>
+                <div>email:</div>
+                <input type="text" id="emailInput" placeholder="Input your email...">
+            </div>
+            <div id="sexContainer">
+                <div>sex:</div>
+                <div id="radioContainer">
+                    <input type="radio" name="chk_info" value="male" checked="checked">male
+                    <input type="radio" name="chk_info" value="female">female
+                </div>
+            </div>
+            <div>
+                <div>job:</div>
+                <select name="job">
+                    <option value="developer" selected="selected">developer</option>
+                    <option value="creater">creater</option>
+                    <option value="teacher">teacher</option>
+                </select>
+            </div>
+            <div id="checkBoxContainer">
+                <div>skill:</div>
+                <div>
+                    <input type="checkbox" id="javaBox" name="java">
+                    <label for="scales">Java</label>
+                    <input type="checkbox" id="jsBox" name="javascript">
+                    <label for="scales">Javascript</label>
+                    <input type="checkbox" id="pyBox" name="python">
+                    <label for="scales">Python</label>
+                </div>
+            </div>
+            <div>
+                <div>note:</div>
+                <textarea id="scales" name="scales"></textarea>
+            </div>
+        </div>
+        <div id="buttonContainer">
+            <button id="registerButton">register</button>
+            <button id="cancelButton">cancel</button>
+        </div>
+    </div>
+</body>
+</html>
