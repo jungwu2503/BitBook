@@ -1,0 +1,36 @@
+.title{
+    padding-top: 50px;
+} 
+
+.input{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.bookNumber{
+    text-align: left;
+    margin-left: 50px;
+    padding-top: 50px;
+}
+
+.userNumber{
+    text-align: left;
+    margin-left: 50px;
+    padding-top: 20px;
+}
+
+#bookNum, #userNum{
+    width: 200px;
+    height: 25px;
+    border: 1px solid gray;
+    border-radius: 15px;
+} 
+
+.okButton, .cancelButton{
+    width: 50px;
+    height: 25px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin: 10px;
+}

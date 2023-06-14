@@ -1,0 +1,56 @@
+#infoContainer{
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 50%;
+    height: 60%;
+    margin: 0px 280px 0px 280px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#topContainer{
+    background-color: orange;
+    /* border-radius: 10px; */
+    height: 25%;
+}
+
+#userIcon{
+    height: 100%;
+    width: 130px;
+    background-color: yellow;
+    border-radius: 500px;
+    transform: translate(220%, 50%);
+    /* transform: translate(45px); */
+}
+
+#contentContainer{
+    text-align: center;
+    margin-top: 7%;
+    height: 48%;
+    padding: 30px;
+    /* border: 1px  solid gray; */
+}
+
+#contentContainer > div{
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+#contentContainer>h2{
+    margin-bottom: 20px;
+}
+
+#infoEditButton{
+    height: 7%;
+    margin: 0px 140px;
+    margin-bottom: 3%;
+    box-sizing: border-box;
+    color: orange;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid orange;
+    border-radius: 5px;
+    background-color: transparent;
+}

@@ -1,0 +1,23 @@
+{
+    "borrow": [
+        {
+            "bookNumber": "000001",
+            "memberNumber": "000001",
+            "bookName" : "이것이 자바다",
+            "returnState": "반납",
+            "borrowDate": "2023-06-13",
+            "returnDate": "2023-06-14",
+            "bookState": "1급"
+        },
+        {
+            "bookNumber": "000002",
+            "memberNumber": "000001",
+            "bookName" : "저것이 자바다",
+            "returnState": "대여중",
+            "borrowDate": "2023-06-13",
+            "returnDate": null,
+            "bookState": "1급"
+        }
+        
+    ]
+}

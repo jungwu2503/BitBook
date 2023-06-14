@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>반납 상세정보</title>
+    <script src="https://kit.fontawesome.com/7904ef1535.js" crossorigin="anonymous"></script>
+    <link href="./assets/css/content.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/nav.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/index.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/borrowList.css" rel="stylesheet" type="text/css" />
+<body>
+    <div class="nav">   
+        <div>
+            <span><img class="imgProfile" src="./assets/img/user.png" alt="..." /></span>
+            <p class="navName">admin</p>
+            <button class="logOut" role="button">로그아웃</button>  
+        </div>
+        <div class="navList">
+            <li class="navLi"><a href="borrow.html">대출</a></li>
+            <li class="navLi"><a href="bookReturn.html" class="here">반납</a></li>
+            
+        </div>
+
+    </div>
+    <div class="mainContainer"> 
+        <div id="contentHearder"> 
+            <select class="pl" id="searchKey">
+                <option>도서번호</option>
+                <option>도서이름</option>
+            </select> 
+            <input type="search" id="search">
+            <button id="searchButton"><i class="searchButton fa-solid fa-magnifying-glass fa-2xl"></i></button>
+        </div>
+
+        <table border="1" cellspacing="0" cellpadding="10" align="center" id="T">
+            <tr bgcolor="#F3BDA6" id="colTitle">
+                <td class="titleLeft">도서 번호</td>
+                <td class="titleCenter">회원 번호</td>
+                <td class="titleCenter">도서 이름</td>
+                <td class="titleCenter">반납 여부</td>
+                <td class="titleCenter">대여 날짜</td>
+                <td class="titleCenter">반납 날짜</td>
+                <td class="titleCenter">도서 상태</td>
+                <td class="titleRight">반납 버튼</td>
+            </tr>
+        </table>
+        <div class="contentFooter">
+            <div id="pageNavContainer">
+                <button type="button" class="arrowButton" ><<</button>
+                <button type="button" class="arrowButton" ><</button>
+                <div class="pageNumber">
+                    1
+                </div>
+                <div class="pageNumber">
+                    2
+                </div>
+                <div class="pageNumber" id="selectedNumber">
+                    3
+                </div>
+                <div class="pageNumber">
+                    4
+                </div>
+                <div class="pageNumber">
+                    5
+                </div>
+                <button type="button" class="arrowButton" >></button>
+                <button type="button" class="arrowButton" >>></button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./bookReturn.js"></script>
+</body>
+</head>
+</html>
